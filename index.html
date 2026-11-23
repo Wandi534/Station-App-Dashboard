@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f3f7fb">
+    <title>Community Reports | Station App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#overview" aria-label="Station App home">
+            <span class="brand-mark"><i class="uil uil-megaphone"></i></span>
+            <span class="brand-name">Station<span> App</span></span>
+        </a>
+
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="side-nav" aria-label="Main navigation">
+            <a class="nav-link active" href="#overview">
+                <i class="uil uil-estate"></i><span>Overview</span>
+            </a>
+            <a class="nav-link" href="#reports">
+                <i class="uil uil-file-edit-alt"></i><span>Reports</span><span class="nav-count">18</span>
+            </a>
+            <a class="nav-link" href="#analytics">
+                <i class="uil uil-chart-line"></i><span>Analytics</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="help-card">
+                <span class="help-icon"><i class="uil uil-lightbulb-alt"></i></span>
+                <strong>Community first</strong>
+                <p>Every report helps make our neighborhoods better.</p>
+            </div>
+            <button class="theme-button" type="button" aria-pressed="false">
+                <i class="uil uil-moon"></i><span>Dark appearance</span>
+                <span class="theme-switch" aria-hidden="true"></span>
+            </button>
+            <div class="user-card">
+            <div class="avatar" aria-hidden="true">M</div>
+            <div class="user-copy"><strong>Michelle</strong><span>Station admin</span></div>
+                <i class="uil uil-angle-down user-chevron" aria-hidden="true"></i>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+        <header class="topbar">
+            <button class="icon-button sidebar-toggle" type="button" aria-label="Toggle navigation" aria-expanded="true">
+                <i class="uil uil-bars"></i>
+            </button>
+            <div class="breadcrumb"><span>Workspace</span><i class="uil uil-angle-right"></i><strong>Overview</strong></div>
+            <label class="global-search">
+                <i class="uil uil-search" aria-hidden="true"></i>
+                <input id="globalSearch" type="search" placeholder="Search reports..." aria-label="Search reports">
+                <kbd>/</kbd>
+            </label>
+            <button class="icon-button notification-button" type="button" aria-label="Notifications">
+                <i class="uil uil-bell"></i><span class="notification-dot"></span>
+            </button>
+            <div class="topbar-avatar" aria-label="Michell">M</div>
+        </header>
+
+        <div class="page-content">
+            <section class="page-heading" aria-labelledby="page-title">
+                <div>
+                    <p class="eyebrow">MONDAY, NOVEMBER 23, 2026</p>
+                    <h1 id="page-title">Good morning, Michelle <span aria-hidden="true">👋</span></h1>
+                    <p class="heading-subtitle">Here’s what’s happening in your community today.</p>
+                </div>
+                <button class="button button-secondary" id="exportButton" type="button">
+                    <i class="uil uil-export"></i><span>Export reports</span>
+                </button>
+            </section>
+
+            <section class="stats-grid" aria-label="Report summary">
+                <article class="stat-card">
+                    <div class="stat-top"><span class="stat-label">Total reports</span><span class="stat-icon blue"><i class="uil uil-file-alt"></i></span></div>
+                    <strong class="stat-value">248</strong>
+                    <div class="stat-foot"><span class="trend positive"><i class="uil uil-arrow-up"></i> 12%</span><span>vs. last month</span></div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top"><span class="stat-label">Needs review</span><span class="stat-icon amber"><i class="uil uil-eye"></i></span></div>
+                    <strong class="stat-value">18</strong>
+                    <div class="stat-foot"><span class="attention-dot"></span><span>5 received today</span></div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top"><span class="stat-label">In progress</span><span class="stat-icon violet"><i class="uil uil-wrench"></i></span></div>
+                    <strong class="stat-value">42</strong>
+                    <div class="stat-foot"><span>Across 6 departments</span></div>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-top"><span class="stat-label">Resolved this month</span><span class="stat-icon green"><i class="uil uil-check-circle"></i></span></div>
+                    <strong class="stat-value">76</strong>
+                    <div class="stat-foot"><span class="trend positive"><i class="uil uil-arrow-up"></i> 8%</span><span>vs. last month</span></div>
+                </article>
+            </section>
+
+            <section class="reports-panel panel" id="reports" aria-labelledby="reports-title">
+                <div class="panel-heading">
+                    <div>
+                        <div class="section-title-row"><h2 id="reports-title">Recent reports</h2><span class="live-badge"><span></span> LIVE QUEUE</span></div>
+                        <p class="panel-subtitle">Review community issues and track municipal follow-up.</p>
+                    </div>
+                    <a class="text-link" href="#reports">View all reports <i class="uil uil-arrow-right"></i></a>
+                </div>
+
+                <div class="report-toolbar">
+                    <label class="table-search">
+                        <i class="uil uil-search" aria-hidden="true"></i>
+                        <input id="tableSearch" type="search" placeholder="Search by issue, area or ID..." aria-label="Search reports by issue, area or ID">
+                    </label>
+                    <label class="select-wrap">
+                        <span class="sr-only">Filter by category</span>
+                        <i class="uil uil-filter" aria-hidden="true"></i>
+                        <select id="categoryFilter" aria-label="Filter by category">
+                            <option value="">All categories</option>
+                            <option value="Roads">Roads</option>
+                            <option value="Street lighting">Street lighting</option>
+                            <option value="Sanitation">Sanitation</option>
+                            <option value="Water">Water</option>
+                            <option value="Traffic">Traffic</option>
+                        </select>
+                    </label>
+                    <label class="select-wrap status-filter">
+                        <span class="sr-only">Filter by status</span>
+                        <i class="uil uil-sliders-v-alt" aria-hidden="true"></i>
+                        <select id="statusFilter" aria-label="Filter by status">
+                            <option value="">All statuses</option>
+                            <option value="New">New</option>
+                            <option value="Under review">Under review</option>
+                            <option value="Assigned">Assigned</option>
+                            <option value="In progress">In progress</option>
+                            <option value="Resolved">Resolved</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="table-wrap">
+                    <table class="reports-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Report</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Reported</th>
+                                <th scope="col">Status</th>
+                                <th scope="col"><span class="sr-only">Evidence</span></th>
+                                <th scope="col"><span class="sr-only">Details</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="reportRows">
+                            <tr class="report-row" tabindex="0" role="button" aria-label="View report SR-2048, Pothole on Main Road" data-id="SR-2048" data-title="Pothole on Main Road" data-category="Roads" data-location="Braamfontein" data-reported="2 hours ago" data-status="In progress" data-photos="2" data-description="A deep pothole is making it difficult for drivers and cyclists to pass safely. The location is near a bus stop." data-department="Roads &amp; Transport">
+                                <td><div class="report-name"><span class="report-type-icon road"><i class="uil uil-constructor"></i></span><span><strong>Pothole on Main Road</strong><small>SR-2048</small></span></div></td>
+                                <td><span class="category-label">Roads</span></td>
+                                <td><span class="location-cell"><i class="uil uil-map-marker"></i>Braamfontein</span></td>
+                                <td class="reported-cell">2 hours ago</td>
+                                <td><span class="status-pill in-progress"><span></span>In progress</span></td>
+                                <td><span class="photo-count" aria-label="2 photos attached"><i class="uil uil-paperclip"></i>2</span></td>
+                                <td><i class="uil uil-angle-right row-arrow" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr class="report-row" tabindex="0" role="button" aria-label="View report SR-2047, Streetlight out near park" data-id="SR-2047" data-title="Streetlight out near park" data-category="Street lighting" data-location="Auckland Park" data-reported="5 hours ago" data-status="Under review" data-photos="1" data-description="The streetlight beside the park entrance has been out for several nights, leaving the footpath very dark." data-department="Electrical Services">
+                                <td><div class="report-name"><span class="report-type-icon light"><i class="uil uil-lightbulb"></i></span><span><strong>Streetlight out near park</strong><small>SR-2047</small></span></div></td>
+                                <td><span class="category-label">Street lighting</span></td>
+                                <td><span class="location-cell"><i class="uil uil-map-marker"></i>Auckland Park</span></td>
+                                <td class="reported-cell">5 hours ago</td>
+                                <td><span class="status-pill review"><span></span>Under review</span></td>
+                                <td><span class="photo-count" aria-label="1 photo attached"><i class="uil uil-paperclip"></i>1</span></td>
+                                <td><i class="uil uil-angle-right row-arrow" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr class="report-row" tabindex="0" role="button" aria-label="View report SR-2046, Illegal dumping by the river" data-id="SR-2046" data-title="Illegal dumping by the river" data-category="Sanitation" data-location="Braamfontein" data-reported="Yesterday" data-status="Assigned" data-photos="3" data-description="Several bags of household waste have been left beside a walking path. The resident attached photos showing the dumping site." data-department="Waste Management">
+                                <td><div class="report-name"><span class="report-type-icon waste"><i class="uil uil-trash-alt"></i></span><span><strong>Illegal dumping by the river</strong><small>SR-2046</small></span></div></td>
+                                <td><span class="category-label">Sanitation</span></td>
+                                <td><span class="location-cell"><i class="uil uil-map-marker"></i>Braamfontein</span></td>
+                                <td class="reported-cell">Yesterday</td>
+                                <td><span class="status-pill assigned"><span></span>Assigned</span></td>
+                                <td><span class="photo-count" aria-label="3 photos attached"><i class="uil uil-paperclip"></i>3</span></td>
+                                <td><i class="uil uil-angle-right row-arrow" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr class="report-row" tabindex="0" role="button" aria-label="View report SR-2045, Water leak near homes" data-id="SR-2045" data-title="Water leak near homes" data-category="Water" data-location="Auckland Park" data-reported="Yesterday" data-status="Resolved" data-photos="2" data-description="Water was pooling around a damaged curbside pipe. Municipal water services repaired the leak and confirmed the area is safe." data-department="Water Services">
+                                <td><div class="report-name"><span class="report-type-icon water"><i class="uil uil-tear"></i></span><span><strong>Water leak near homes</strong><small>SR-2045</small></span></div></td>
+                                <td><span class="category-label">Water</span></td>
+                                <td><span class="location-cell"><i class="uil uil-map-marker"></i>Auckland Park</span></td>
+                                <td class="reported-cell">Yesterday</td>
+                                <td><span class="status-pill resolved"><span></span>Resolved</span></td>
+                                <td><span class="photo-count" aria-label="2 photos attached"><i class="uil uil-paperclip"></i>2</span></td>
+                                <td><i class="uil uil-angle-right row-arrow" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr class="report-row" tabindex="0" role="button" aria-label="View report SR-2044, Cracked sidewalk by school" data-id="SR-2044" data-title="Cracked sidewalk by school" data-category="Roads" data-location="Braamfontein" data-reported="2 days ago" data-status="New" data-photos="1" data-description="A raised and cracked section of sidewalk near the school entrance could be a trip hazard for pedestrians." data-department="Not yet assigned">
+                                <td><div class="report-name"><span class="report-type-icon road"><i class="uil uil-constructor"></i></span><span><strong>Cracked sidewalk by school</strong><small>SR-2044</small></span></div></td>
+                                <td><span class="category-label">Roads</span></td>
+                                <td><span class="location-cell"><i class="uil uil-map-marker"></i>Braamfontein</span></td>
+                                <td class="reported-cell">2 days ago</td>
+                                <td><span class="status-pill new"><span></span>New</span></td>
+                                <td><span class="photo-count" aria-label="1 photo attached"><i class="uil uil-paperclip"></i>1</span></td>
+                                <td><i class="uil uil-angle-right row-arrow" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr class="report-row" tabindex="0" role="button" aria-label="View report SR-2043, Overflowing public bin" data-id="SR-2043" data-title="Overflowing public bin" data-category="Sanitation" data-location="Auckland Park" data-reported="2 days ago" data-status="In progress" data-photos="1" data-description="The public bin beside the market entrance is overflowing and attracting litter. A collection has been scheduled." data-department="Waste Management">
+                                <td><div class="report-name"><span class="report-type-icon waste"><i class="uil uil-trash-alt"></i></span><span><strong>Overflowing public bin</strong><small>SR-2043</small></span></div></td>
+                                <td><span class="category-label">Sanitation</span></td>
+                                <td><span class="location-cell"><i class="uil uil-map-marker"></i>Auckland Park</span></td>
+                                <td class="reported-cell">2 days ago</td>
+                                <td><span class="status-pill in-progress"><span></span>In progress</span></td>
+                                <td><span class="photo-count" aria-label="1 photo attached"><i class="uil uil-paperclip"></i>1</span></td>
+                                <td><i class="uil uil-angle-right row-arrow" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr class="report-row" tabindex="0" role="button" aria-label="View report SR-2042, Traffic signal timing issue" data-id="SR-2042" data-title="Traffic signal timing issue" data-category="Traffic" data-location="Braamfontein" data-reported="3 days ago" data-status="Resolved" data-photos="2" data-description="The pedestrian crossing signal was not staying on long enough. The traffic team adjusted the crossing interval." data-department="Roads &amp; Transport">
+                                <td><div class="report-name"><span class="report-type-icon traffic"><i class="uil uil-traffic-light"></i></span><span><strong>Traffic signal timing issue</strong><small>SR-2042</small></span></div></td>
+                                <td><span class="category-label">Traffic</span></td>
+                                <td><span class="location-cell"><i class="uil uil-map-marker"></i>Braamfontein</span></td>
+                                <td class="reported-cell">3 days ago</td>
+                                <td><span class="status-pill resolved"><span></span>Resolved</span></td>
+                                <td><span class="photo-count" aria-label="2 photos attached"><i class="uil uil-paperclip"></i>2</span></td>
+                                <td><i class="uil uil-angle-right row-arrow" aria-hidden="true"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="empty-state" id="emptyState" hidden>
+                        <i class="uil uil-search"></i>
+                        <strong>No reports found</strong>
+                        <span>Try changing your search or filters.</span>
+                    </div>
+                </div>
+                <div class="table-footer"><span id="resultsCount" aria-live="polite">Showing 7 recent reports</span><a href="#reports">Open report queue <i class="uil uil-arrow-right"></i></a></div>
+            </section>
+
+            <section class="insights-grid" id="analytics" aria-label="Community insights">
+                <article class="panel insight-panel">
+                    <div class="panel-heading compact-heading">
+                        <div><h2>Resolution time</h2><p class="panel-subtitle">Average time to close a report</p></div>
+                        <span class="period-label"><i class="uil uil-calendar-alt"></i> This month</span>
+                    </div>
+                    <div class="resolution-content">
+                        <div class="resolution-number"><strong>3.2</strong><span>days</span><span class="trend positive"><i class="uil uil-arrow-down"></i> 0.6 days</span></div>
+                        <div class="mini-chart" role="img" aria-label="Resolution time trending down over the last six months">
+                            <span style="--bar-height: 76%"><small>Jun</small></span>
+                            <span style="--bar-height: 64%"><small>Jul</small></span>
+                            <span style="--bar-height: 70%"><small>Aug</small></span>
+                            <span style="--bar-height: 48%"><small>Sep</small></span>
+                            <span style="--bar-height: 55%"><small>Oct</small></span>
+                            <span class="current" style="--bar-height: 34%"><small>Nov</small></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel insight-panel">
+                    <div class="panel-heading compact-heading">
+                        <div><h2>Reports by category</h2><p class="panel-subtitle">Where the community needs support</p></div>
+                        <a class="text-link" href="#reports">Details <i class="uil uil-arrow-right"></i></a>
+                    </div>
+                    <div class="category-list">
+                        <div class="category-row"><span><i class="category-dot roads-dot"></i>Roads &amp; sidewalks</span><strong>38%</strong><div class="category-track"><i style="width: 38%"></i></div></div>
+                        <div class="category-row"><span><i class="category-dot waste-dot"></i>Sanitation</span><strong>26%</strong><div class="category-track"><i style="width: 26%"></i></div></div>
+                        <div class="category-row"><span><i class="category-dot light-dot"></i>Street lighting</span><strong>18%</strong><div class="category-track"><i style="width: 18%"></i></div></div>
+                    </div>
+                </article>
+            </section>
+
+            <footer class="page-footer"><span>Community reports dashboard</span><span>Demo data · Connect a backend to use live reports</span></footer>
+        </div>
+    </main>
+
+    <dialog class="report-dialog" id="reportDialog" aria-labelledby="dialogTitle">
+        <div class="dialog-header">
+            <div><span class="dialog-kicker" id="dialogId">REPORT DETAILS</span><h2 id="dialogTitle">Report title</h2></div>
+            <button class="icon-button dialog-close" type="button" aria-label="Close report details"><i class="uil uil-times"></i></button>
+        </div>
+        <div class="dialog-body">
+            <div class="dialog-meta"><span id="dialogStatus" class="status-pill"></span><span id="dialogCategory"></span><span id="dialogReported"></span></div>
+            <p class="dialog-description" id="dialogDescription"></p>
+            <div class="dialog-location"><i class="uil uil-map-marker"></i><span id="dialogLocation"></span></div>
+            <div class="evidence-heading"><strong>Photo evidence</strong><span id="dialogPhotos"></span></div>
+            <div class="evidence-previews" id="evidencePreviews"></div>
+            <div class="timeline-heading"><strong>Progress updates</strong><span id="dialogDepartment"></span></div>
+            <ol class="timeline" id="reportTimeline"></ol>
+        </div>
+        <div class="dialog-footer"><span><i class="uil uil-info-circle"></i> Demo report details</span><button class="button button-primary dialog-done" type="button">Done</button></div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
